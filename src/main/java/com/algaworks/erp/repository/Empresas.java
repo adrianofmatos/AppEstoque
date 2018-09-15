@@ -3,6 +3,7 @@ package com.algaworks.erp.repository;
 import java.io.Serializable;
 import java.util.List;
 
+import javax.inject.Inject;
 import javax.persistence.EntityManager;
 import javax.persistence.TypedQuery;
 
@@ -29,12 +30,12 @@ public class Empresas implements Serializable {
 
 	public List<Empresa> pesquisar(String nome) {
 		String jpql = "from Empresa where nomeFantasia like :nomeFantasia";
-
+		
 		TypedQuery<Empresa> query = manager
 				.createQuery(jpql, Empresa.class);
-
+		
 		query.setParameter("nomeFantasia", nome + "%");
-
+		
 		return query.getResultList();
 	}
 
@@ -43,7 +44,7 @@ public class Empresas implements Serializable {
 	}
 
 	public void remover(Empresa empresa) {
-		empresa = porId(empresa.getId()); // Colocar no contexto do Entity Manager
+		empresa = porId(empresa.getId());
 		manager.remove(empresa);
 	}
 }

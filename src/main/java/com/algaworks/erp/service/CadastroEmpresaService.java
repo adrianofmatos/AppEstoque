@@ -9,20 +9,20 @@ import com.algaworks.erp.repository.Empresas;
 import com.algaworks.erp.util.Transacional;
 
 public class CadastroEmpresaService implements Serializable {
-	
-	private static final long serialVersionUID = 1L;
 
-	@Inject
-	private Empresas empresas;
+    private static final long serialVersionUID = 1L;
 
-	@Transacional
-	public void salvar(Empresa empresa) {
-		empresas.guardar(empresa);
-	}
+    @Inject
+    private Empresas empresas;
 
-	@Transacional
-	public void excluir(Empresa empresa) {
-		empresas.remover(empresa);
-	}
-	
+    @Transacional
+    public void salvar(Empresa empresa) {
+        empresas.guardar(empresa);
+    }
+
+    @Transacional
+    public void excluir(Empresa empresa) {
+        empresas.remover(empresa);
+    }
+
 }

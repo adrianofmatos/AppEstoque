@@ -26,12 +26,12 @@ public class RamoAtividade implements Serializable {
 		return id;
 	}
 
-	public String getDescricao() {
-		return descricao;
-	}
-
 	public void setId(Long id) {
 		this.id = id;
+	}
+
+	public String getDescricao() {
+		return descricao;
 	}
 
 	public void setDescricao(String descricao) {
@@ -67,8 +67,4 @@ public class RamoAtividade implements Serializable {
 	public String toString() {
 		return "RamoAtividade [id=" + id + "]";
 	}
-	
-	
-	
-
 }

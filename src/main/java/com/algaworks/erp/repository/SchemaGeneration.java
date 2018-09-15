@@ -9,16 +9,18 @@ import javax.persistence.Persistence;
 import com.algaworks.erp.model.Empresa;
 
 public class SchemaGeneration {
-	public static void main(String[] args) {
-		EntityManagerFactory emf = Persistence.createEntityManagerFactory("AlgaWorksPU");
 
-		EntityManager em = emf.createEntityManager();
+    public static void main(String[] args) {
+        EntityManagerFactory emf = Persistence.createEntityManagerFactory("AlgaWorksPU");
 
-		List<Empresa> lista = em.createQuery("from Empresa", Empresa.class).getResultList();
+        EntityManager em = emf.createEntityManager();
 
-		System.out.println(lista);
+        List<Empresa> lista = em.createQuery("from Empresa", Empresa.class).getResultList();
 
-		em.close();
-		emf.close();
-	}
+        System.out.println(lista);
+
+        em.close();
+        emf.close();
+    }
+
 }
