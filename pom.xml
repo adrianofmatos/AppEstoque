@@ -8,8 +8,8 @@
 
 	<packaging>war</packaging>
 
-	<name>curso-jsf-e-primefaces-essencial</name>
-	<description>Curso JSF e PrimeFaces Essencial</description>
+	<name>AppEstoque</name>
+	<description>Aplicativo para Controle de Estoque</description>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
